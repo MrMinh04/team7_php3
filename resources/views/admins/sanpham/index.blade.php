@@ -6,12 +6,12 @@
 
 @section('title')
     {{-- Hiển thị dữ liệu trong blade --}}
-    {{-- {{ $title }} --}}
+    {{ $title }}
 @endsection
 
 @section('content')
 {{-- <a href="{{route('san_pham.create')}}" class="btn btn-success">Thêm Sản Phẩm</a> --}}
-    {{-- <h1 class="h1 text-center mt-3 mb-3">{{ $title }}</h1> --}}
+    <h1 class="h1 text-center mt-3 mb-3">{{ $title }}</h1>
 
 
     {{-- Hiển thị thông báo --}}

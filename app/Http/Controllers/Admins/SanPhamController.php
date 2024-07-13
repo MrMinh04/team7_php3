@@ -25,7 +25,8 @@ class SanPhamController extends Controller
         // Sử dụng Eloquent
         // $title = "Danh sách sản phẩm";
         $listSanPham = SanPham::get();
-        return view('admins/sanpham/index', ['listSanPham' => $listSanPham]);
+        $title = "Danh sách sản phẩm";
+        return view('admins/sanpham/index', compact('listSanPham','title'));
     }
 
     /**
