@@ -1,8 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admins\KhachHangController;
 use App\Http\Controllers\Admins\SanPhamController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\KhachHangController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,13 +42,16 @@ Route::get('/', function () {
 
 //Tạo 1 route trỏ đến 1 hàm trong controller
 
-Route::get('/admin/khach_hang', [KhachHangController::class, 'admin_danh_sach']);
+// Route::get('/admin/khach_hang', [KhachHangController::class, 'admin_danh_sach']);
 
-Route::get('/admin/them_khach_hang', [KhachHangController::class, 'admin_them']);
+// Route::get('/admin/them_khach_hang', [KhachHangController::class, 'admin_them']);
 
-Route::get('/admin/sua_khach_hang', [KhachHangController::class, 'admin_sua']);
+// Route::get('/admin/sua_khach_hang', [KhachHangController::class, 'admin_sua']);
 
-Route::get('/home', [HomeController::class, 'index']);
+// Route::get('/home', [HomeController::class, 'index']);
+
+// 
+Route::resource('khach_hang', KhachHangController::class);
 
 // Route resource
 Route::get('san_pham/test', [SanPhamController::class, 'test'])->name('sanpham.test');//(Phải đặt bên trên resource)
